@@ -11,7 +11,6 @@ class CreateController extends Controller
 
         return view('tag.create');
 
-
     }
 
 }
