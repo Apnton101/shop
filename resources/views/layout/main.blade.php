@@ -155,7 +155,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
+                    <a href="{{ route('category.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-align-justify"></i>
                         <p>
                             Категорії
@@ -163,7 +163,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
+                    <a href="{{ route('tag.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-tags"></i>
                         <p>
                             Теги
@@ -188,52 +188,25 @@
                 </li>
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
-
-        <!-- /.sidebar -->
     </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Головна</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Головна</a></li>
+    <!-- Main content -->
 
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+    @yield('content')
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
-                @yield('content')
-            </div><!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong>shop &copy; 2021-{{ now()->year }} <a href="{{ route('main.index') }}">Магазин</a>.</strong>
-        Всі права захищені
+</div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+    <strong>shop &copy; 2021-{{ now()->year }} <a href="{{ route('main.index') }}">Магазин</a>.</strong>
+    Всі права захищені
 
-    </footer>
+</footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
